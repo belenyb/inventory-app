@@ -6,6 +6,7 @@
         <th scope="col">Nombre</th>
         <th scope="col">Descripcion</th>
         <th scope="col">SKU</th>
+        <th scope="col">Categoria</th>
         <th scope="col">Stock</th>
         <th scope="col">Precio</th>
       </tr>
@@ -16,6 +17,7 @@
           <td><%= item.item_name %></td>
           <td><%= item.description %></td>
           <td><%= item.sku %></td>
+          <td><%= item.category %></td>
           <td><%= item.quantity_on_hand %></td>
           <td><%= item.sale_price_per_unit %></td>
         </tr>
@@ -23,6 +25,7 @@
       <% total_quantity_on_hand = @items.sum(&:quantity_on_hand) %>
       <% total_sale_price_per_unit = @items.sum(&:sale_price_per_unit) %>
         <tr class="bg-dark text-white">
+          <td></td>
           <td></td>
           <td></td>
           <td></td>

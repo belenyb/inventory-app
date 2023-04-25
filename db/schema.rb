@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_130250) do
     t.integer "quantity_on_hand"
     t.integer "sale_price_per_unit"
     t.string "sku"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

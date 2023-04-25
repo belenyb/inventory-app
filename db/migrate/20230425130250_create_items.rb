@@ -14,6 +14,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.integer :quantity_on_hand
       t.integer :sale_price_per_unit
       t.string :sku
+      t.string :category
 
       t.timestamps
     end
