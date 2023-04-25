@@ -73,3 +73,9 @@ end
 
 gem 'mime-types'
 gem 'rest-client'
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+gem 'jquery-rails'
+
+gem "cssbundling-rails", "~> 1.1"
+
+gem "jsbundling-rails", "~> 1.1"
