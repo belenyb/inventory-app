@@ -24,13 +24,13 @@
       <% end %>
       <% total_quantity_on_hand = @items.sum(&:quantity_on_hand) %>
       <% total_sale_price_per_unit = @items.sum(&:sale_price_per_unit) %>
-        <tr class="bg-dark text-white">
+        <tr class="bg-dark">
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td><strong><%= total_quantity_on_hand %></strong></td>
-          <td><strong><%= total_sale_price_per_unit %></strong></td>
+          <td class="text-white"><strong><%= total_quantity_on_hand %></strong></td>
+          <td class="text-white"><strong><%= total_sale_price_per_unit %></strong></td>
         </tr>
     </tbody>
   </table>

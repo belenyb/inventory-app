@@ -1,16 +1,20 @@
-<p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#<%= title %>" role="button" aria-expanded="false" aria-controls=<%= title %>>
-    <%= title %>
-  </a>
-</p>
-<div class="collapse mb-4" id=<%= title %>>
-  <div class="card card-body">
-    <ul>
-      <% items.each do |item| %>
-        <li>
-          <%= item.item_name %>
-        </li>
-      <% end %>
-    </ul>
+ <a data-bs-toggle="collapse" href="#<%= title %>" role="button" aria-expanded="false" aria-controls=<%= title %>>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= title %></h5>
+      <p class="card-text">
+        <div class="collapse mb-4" id=<%= title %>>
+          <div class="card card-body">
+            <ul>
+              <% items.each do |item| %>
+                <li>
+                  <%= item.item_name %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </p>
+    </div>
   </div>
-</div>
+</a>
