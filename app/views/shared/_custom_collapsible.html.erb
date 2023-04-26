@@ -1,0 +1,16 @@
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#<%= title %>" role="button" aria-expanded="false" aria-controls=<%= title %>>
+    <%= title %>
+  </a>
+</p>
+<div class="collapse mb-4" id=<%= title %>>
+  <div class="card card-body">
+    <ul>
+      <% items.each do |item| %>
+        <li>
+          <%= item.item_name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
