@@ -18,4 +18,13 @@ class BackendService
     end
     items
   end
+
+  def create_item(item)
+    puts "from create_item"
+    item = item.attributes.compact
+    item = [item];
+    item = item.to_json;
+    response = RestClient.post "#{@baseUrl}/item", item, {:accept => :json, content_type: :json, :Authorization => "Bearer #{@token}"}
+    response
+  end
 end
