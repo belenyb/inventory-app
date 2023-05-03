@@ -1,0 +1,7 @@
+.productos .collapse-button[aria-expanded="true"] {
+  i {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
