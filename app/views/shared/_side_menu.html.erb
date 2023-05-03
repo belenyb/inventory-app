@@ -7,15 +7,15 @@
         </a>
       </li>
       <li class="nav-item">
-        <%= link_to inventory_index_path, class: "nav-link active" do %>
-          <i class="bi bi-book"></i>
-          Inventario
-        <% end %>
-      </li>
-      <li class="nav-item">
         <%= link_to products_path, class: "nav-link active" do %>
           <i class="bi bi-cart2"></i>
           Productos
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to categories_path, class: "nav-link active" do %>
+          <i class="bi bi-book"></i>
+          Categorías
         <% end %>
       </li>
       <li class="nav-item">

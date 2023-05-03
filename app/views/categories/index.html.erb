@@ -1,0 +1,10 @@
+<div class="productos">
+  <%= render partial: 'shared/section_title', locals: {title: "Productos", backButton: false} %>
+  <div class="row">
+    <% @items_by_category.each do |category, items| %>
+      <div class="col">
+        <%= render partial: 'shared/custom_collapsible', locals: {title: category.upcase, items: items} %>
+      </div>
+    <% end %>
+  </div>
+</div>

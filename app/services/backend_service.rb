@@ -20,11 +20,21 @@ class BackendService
   end
 
   def create_item(item)
-    puts "from create_item"
     item = item.attributes.compact
     item = [item];
     item = item.to_json;
     response = RestClient.post "#{@baseUrl}/item", item, {:accept => :json, content_type: :json, :Authorization => "Bearer #{@token}"}
+    response
+  end
+
+  def get_item(item_id)
+    response = RestClient.get "#{@baseUrl}/item/#{item_id}", {accept: :json, :Authorization => "Bearer #{@token}"}
+    @item = Item.new(JSON.parse(response.body))
+    @item
+  end
+
+  def delete_item(item_id)
+    response = RestClient.delete "#{@baseUrl}/item/#{item_id}", {accept: :json, :Authorization => "Bearer #{@token}"}
     response
   end
 end

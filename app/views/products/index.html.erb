@@ -1,10 +1,53 @@
-<div class="productos">
-  <%= render partial: 'shared/section_title', locals: {title: "Productos", backButton: false} %>
-  <div class="row">
-    <% @items_by_category.each do |category, items| %>
-      <div class="col">
-        <%= render partial: 'shared/custom_collapsible', locals: {title: category.upcase, items: items} %>
-      </div>
-    <% end %>
+<div class="inventario">
+  <%= render partial: 'shared/section_title', locals: {title: "Inventario", backButton: false} %>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">SKU</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Precio</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td><%= item.item_name %></td>
+            <td><%= item.description %></td>
+            <td><%= item.sku %></td>
+            <td><%= item.category %></td>
+            <td><%= item.quantity_on_hand %></td>
+            <td><%= item.sale_price_per_unit %></td>
+            <td>
+              <%= link_to product_path(item._uuid), method: :patch do %>
+              <i class="bi bi-pencil-square text-primary"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to product_path(item._uuid), method: :delete, class: "btn btn-danger" do %>
+                <i class="bi bi-trash"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        <% total_quantity_on_hand = @items.sum(&:quantity_on_hand) %>
+        <% total_sale_price_per_unit = @items.sum(&:sale_price_per_unit) %>
+        <tr class="bg-dark">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="text-white"><strong><%= total_quantity_on_hand %></strong></td>
+          <td class="text-white"><strong><%= total_sale_price_per_unit %></strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

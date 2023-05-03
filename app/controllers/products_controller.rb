@@ -5,8 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    items = @backend_service.get_items()
-    @items_by_category = items.group_by { |item| item["category"] }
+    @items = @backend_service.get_items()
   end
 
   def new
@@ -19,11 +18,23 @@ class ProductsController < ApplicationController
     if @item.valid?
       @resp = @backend_service.create_item(@item)
       if @resp.code == 201
-        redirect_to inventory_index_path, notice: "Producto cargado exitosamente"
+        redirect_to products_path, notice: "Producto cargado exitosamente"
       else
         redirect_to :new, notice: "Error al cargar el producto"
       end
     end
+  end
+
+  def show
+    @item = @backend_service.get_item(params[:id])
+  end
+
+  def update
+  end
+
+  def destroy
+    p "destroy method"
+    @item = Item.find(params[:_uuid])
   end
 
   private
