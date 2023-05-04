@@ -1,0 +1,31 @@
+<%= form_with url: url, model: @item, method: method, local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :item_name %>
+    <%= form.text_field :item_name, class: "form-control", name: "item[item_name]" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control", name: "item[description]" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :brand %>
+    <%= form.text_field :brand, class: "form-control", name: "item[brand]" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :sku %>
+    <%= form.text_field :sku, class: "form-control", name: "item[sku]" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :category %>
+    <%= form.select :category, options_for_select(@items_by_category.keys.map { |category| [category.capitalize, category] }), {}, { class: "form-control", name: "item[category]" } %>
+  </div>
+  <div class="form-group">
+    <%= form.label :quantity_on_hand %>
+    <%= form.number_field :quantity_on_hand, class: "form-control", name: "item[quantity_on_hand]" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :sale_price_per_unit %>
+    <%= form.number_field :sale_price_per_unit, class: "form-control", name: "item[sale_price_per_unit]" %>
+  </div>
+  <%= form.submit "Guardar", class: "btn btn-primary" %>
+<% end %>
