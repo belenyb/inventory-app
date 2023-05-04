@@ -33,6 +33,10 @@ class BackendService
     @item
   end
 
+  def update_item(item, item_id)
+    response = RestClient.put "#{@baseUrl}/item/#{item_id}", item.to_json, {:accept => :json, content_type: :json, :Authorization => "Bearer #{@token}"}
+  end
+
   def delete_item(item_id)
     response = RestClient.delete "#{@baseUrl}/item/#{item_id}", {accept: :json, :Authorization => "Bearer #{@token}"}
     response
