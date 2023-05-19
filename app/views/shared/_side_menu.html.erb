@@ -2,18 +2,19 @@
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="bi bi-view-stacked"></i>          Dashboard
-        </a>
+        <%= link_to dashboard_index_path, class: "nav-link" do %>
+          <i class="bi bi-view-stacked"></i>
+          Dashboard
+        <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to products_path, class: "nav-link active" do %>
+        <%= link_to products_path, class: "nav-link" do %>
           <i class="bi bi-cart2"></i>
           Productos
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to categories_path, class: "nav-link active" do %>
+        <%= link_to categories_path, class: "nav-link" do %>
           <i class="bi bi-book"></i>
           Categorías
         <% end %>
