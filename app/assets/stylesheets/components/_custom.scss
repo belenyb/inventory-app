@@ -2,3 +2,18 @@
   left: auto;
   right: 0;
 }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  top: 0;
+}
+
+.root-div {
+  margin-top: calc(65px + 1vw);
+}
+
+nav.sidebar {
+  padding-top: calc(65px + 1vw);
+}
