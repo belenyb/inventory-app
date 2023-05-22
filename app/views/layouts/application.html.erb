@@ -25,11 +25,15 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/header' %>
+    <% end %>
     <div class="container-fluid root-div">
       <div class="row">
-        <%= render 'shared/side_menu' %>
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <% if user_signed_in? %>
+          <%= render 'shared/side_menu' %>
+        <% end %>
+        <main class="ms-sm-auto px-md-4 <%= user_signed_in? ? "col-md-9 col-lg-10" : "col-12 col-md-4 mx-auto" %>">
         <%= yield %>
         </main>
       </div>
