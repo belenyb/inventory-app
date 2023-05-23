@@ -13,7 +13,11 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Perfil</a></li>
-            <%= link_to "Cerrar sesión", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            <li>
+              <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                Cerrar sesión
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
