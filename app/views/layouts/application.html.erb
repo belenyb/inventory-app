@@ -28,7 +28,7 @@
     <% if user_signed_in? %>
       <%= render 'shared/header' %>
     <% end %>
-    <div class="container-fluid root-div">
+    <div class="container-fluid root-div <%= user_signed_in? ? "logged-in" : "not-logged-in" %>">
       <div class="row">
         <% if user_signed_in? %>
           <%= render 'shared/side_menu' %>
