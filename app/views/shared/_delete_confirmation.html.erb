@@ -1,0 +1,16 @@
+<div class="modal fade" id="deleteConfirmationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header justify-content-center border-0 p-2">
+        <h1 class="modal-title fs-5" id="deleteConfirmationModalLabel">¿Estás seguro que querés eliminar este producto?</h1>
+      </div>
+      <div class="modal-body p-2 mx-5">
+        Una vez confirmada, esta acción <strong> no podrá revertirse</strong>.
+      </div>
+      <div class="modal-footer justify-content-center border-0 p-2">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <%= link_to "Confirmar", product_path(id), data: {turbo_method: :delete}, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

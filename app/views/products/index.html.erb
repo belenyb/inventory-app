@@ -29,9 +29,10 @@
               <% end %>
             </td>
             <td>
-              <%= button_to product_path(item._uuid), method: :delete, data: { confirm: "Are you sure you want to delete this product?" }, class: "border-0 bg-transparent" do %>
+              <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
                 <i class="bi bi-trash text-danger"></i>
-              <% end %>
+              </a>
+              <%= render partial: 'shared/delete_confirmation', locals: {id: item._uuid} %>
             </td>
           </tr>
         <% end %>

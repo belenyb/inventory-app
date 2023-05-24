@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :categories
   resources :products
+  get '/profile', to: 'profile#index'
 end
