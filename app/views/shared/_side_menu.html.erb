@@ -1,34 +1,37 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block">
+  <button class="toggleSidebar rounded-circle px-2 py-1 border-0">
+    <i class="bi bi-chevron-double-right"></i>
+  </button>
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
         <%= link_to dashboard_index_path, class: "nav-link" do %>
-          <i class="bi bi-view-stacked"></i>
+          <i class="bi bi-view-stacked pe-2"></i>
           Dashboard
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to products_path, class: "nav-link" do %>
-          <i class="bi bi-cart2"></i>
+          <i class="bi bi-cart2 pe-2"></i>
           Productos
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to categories_path, class: "nav-link" do %>
-          <i class="bi bi-book"></i>
+          <i class="bi bi-book pe-2"></i>
           Categorías
         <% end %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="bi bi-file-earmark-bar-graph"></i>
+          <i class="bi bi-file-earmark-bar-graph pe-2"></i>
           Reportes
         </a>
       </li>
       <li class="nav-item">
-      <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
-        <i class="bi bi-box-arrow-right"></i> Cerrar sesión
-      </button>
+        <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
+          <i class="bi bi-box-arrow-right pe-2"></i> Cerrar sesión
+        </button>
       </li>
     </ul>
   </div>

@@ -1,3 +1,14 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $navigation-bg;
+  main {
+    background: $white;
+    padding: 2rem;
+    border-radius: 40px;
+  }
+}
+
+
 .dropdown-menu.show {
   left: auto;
   right: 0;
@@ -8,12 +19,36 @@
   width: 100%;
   z-index: 101;
   top: 0;
+  font-weight: 400;
+  a {
+    color: $black;
+  }
+  .header-logo {
+    font-size: 16px;
+  }
 }
 
 .root-div.logged-in {
   margin-top: calc(65px + 1vw);
 }
 
-nav.sidebar {
+nav {
   padding-top: calc(65px + 1vw);
+  background-color: $navigation-bg;
+}
+
+#sidebarMenu {
+  font-size: 16px;
+  box-shadow: none;
+  position: relative;
+  .toggleSidebar {
+    position: absolute;
+    right: -15px;
+    z-index: 102;
+    background-color: $black;
+    color: $white;
+  }
+  a, button {
+    color: $black;
+  }
 }
