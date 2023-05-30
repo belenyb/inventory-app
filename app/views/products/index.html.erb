@@ -21,8 +21,8 @@
             <td><%= item.description %></td>
             <td><%= item.sku %></td>
             <td><%= item.category %></td>
-            <td><%= item.quantity_on_hand %></td>
-            <td><%= item.sale_price_per_unit %></td>
+            <td><%= format_price(item.quantity_on_hand) %></td>
+            <td><%= format_price(item.sale_price_per_unit) %></td>
             <td>
               <%= link_to edit_product_path(item._uuid) do %>
                 <i class="bi bi-pencil-square text-primary"></i>
@@ -43,8 +43,8 @@
           <td></td>
           <td></td>
           <td></td>
-          <td class="text-white"><strong><%= total_quantity_on_hand %></strong></td>
-          <td class="text-white"><strong><%= total_sale_price_per_unit %></strong></td>
+          <td class="text-white"><strong><%= format_price(total_quantity_on_hand) %></strong></td>
+          <td class="text-white"><strong><%= format_price(total_sale_price_per_unit) %></strong></td>
           <td></td>
           <td></td>
         </tr>
