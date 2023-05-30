@@ -8,4 +8,7 @@ class CategoriesController < ApplicationController
       items = @backend_service.get_items()
       @items_by_category = items.group_by { |item| item["category"] }
     end
+
+    def show
+    end
 end
