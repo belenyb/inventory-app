@@ -8,6 +8,29 @@ body {
   }
 }
 
+.btn, .btn:hover {
+  background: $black;
+  color: $white;
+  border-radius: 4px;
+  padding: 4px 12px;
+  border: 1px solid $black;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.btn-cancel, .btn-cancel:hover {
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
+}
+
+.btn:hover, .btn-cancel:hover {
+  box-shadow: 0px 0px 3px 2px #e3e3e3;
+}
+
+.goback-icon {
+  color: $black;
+}
 
 .dropdown-menu.show {
   left: auto;
@@ -25,6 +48,9 @@ body {
   }
   .header-logo {
     font-size: 16px;
+  }
+  button, button:hover {
+    color: $black;
   }
 }
 

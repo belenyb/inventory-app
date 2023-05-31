@@ -1,14 +1,14 @@
 <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center">
+    <div class="modal-content text-center p-2">
       <div class="modal-header justify-content-center border-0 p-2">
-        <h1 class="modal-title fs-5" id="logoutModalLabel">¿Cerrar sesión?</h1>
+        <h1 class="modal-title fs-6" id="logoutModalLabel">¿Cerrar sesión?</h1>
       </div>
-      <div class="modal-body p-2 mx-5">
+      <div class="modal-body p-2 mx-4 fw-light">
         Tendrás que volver a ingresar email y contraseña para volver a usar <strong>InApp</strong>.
       </div>
       <div class="modal-footer justify-content-center border-0 p-2">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
         <%= link_to "Cerrar sesión", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-primary" %>
       </div>
     </div>

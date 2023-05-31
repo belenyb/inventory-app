@@ -2,14 +2,14 @@
 <div class="d-flex <%= !backButton ? "justify-content-between" : "justify-content-start" %> flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
   <% if backButton %>
     <%= link_to :back, class:"me-3" do %>
-      <i class="bi bi-arrow-left h5 text-warning"></i>
+      <i class="bi bi-arrow-left-square fs-5 goback-icon"></i>
     <% end %>
   <% end %>
-  <h1 class="h2"><%= title %></h1>
+  <h1 class="h2 mb-0"><%= title %></h1>
   <% if title == "Productos" %>
   <div class="btn-toolbar mb-2 mb-md-0">
     <%= link_to new_product_path do %>
-      <button type="button" class="btn btn-sm btn-warning fw-semibold">Nuevo +</button>
+      <button type="button" class="btn btn-sm">Nuevo +</button>
     <% end %>
   </div>
   <% end %>
