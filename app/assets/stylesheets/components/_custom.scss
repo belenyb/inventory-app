@@ -32,6 +32,26 @@ body {
   color: $black;
 }
 
+.table-responsive {
+  background: #efefef;
+  padding: 10px 16px;
+  border-radius: 12px;
+  tbody {
+    border-color: transparent;
+    .bi-trash {
+      color: $red;
+    }
+    .bi-pencil-square {
+      color: $blue;
+    }
+    .table-totals {
+      border-bottom: 1px solid #dee2e6;
+      font-weight: 500;
+      border-radius: 12px;
+    }
+  }
+}
+
 .dropdown-menu.show {
   left: auto;
   right: 0;
@@ -61,6 +81,10 @@ body {
 nav {
   padding-top: calc(65px + 1vw);
   background-color: $navigation-bg;
+}
+
+a {
+  color: $blue;
 }
 
 #sidebarMenu {

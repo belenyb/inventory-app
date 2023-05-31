@@ -22,7 +22,7 @@
         </ul>
         <% if items.size > 5 %>
           <div class="mt-2 text-end">
-            <%= link_to "Ver más", category_path(title.downcase) %>
+            <%= link_to "Ver más", category_path(title.downcase), class: "link-offset-2" %>
           </div>
         <% end %>
       </div>

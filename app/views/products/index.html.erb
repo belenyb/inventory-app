@@ -1,7 +1,7 @@
 <div class="inventario">
   <%= render partial: 'shared/section_title', locals: {title: "Productos", backButton: false} %>
   <div class="table-responsive">
-    <table class="table table-striped table-sm align-middle">
+    <table class="table table-hover table-sm align-middle">
       <thead>
         <tr>
           <th scope="col">Nombre</th>
@@ -25,12 +25,12 @@
             <td><%= format_price(item.sale_price_per_unit) %></td>
             <td>
               <%= link_to edit_product_path(item._uuid) do %>
-                <i class="bi bi-pencil-square text-primary"></i>
+                <i class="bi bi-pencil-square"></i>
               <% end %>
             </td>
             <td>
               <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
-                <i class="bi bi-trash text-danger"></i>
+                <i class="bi bi-trash"></i>
               </a>
               <%= render partial: 'shared/delete_confirmation', locals: {id: item._uuid} %>
             </td>
@@ -38,13 +38,13 @@
         <% end %>
         <% total_quantity_on_hand = @items.sum(&:quantity_on_hand) %>
         <% total_sale_price_per_unit = @items.sum(&:sale_price_per_unit) %>
-        <tr class="bg-dark">
+        <tr class="table-totals">
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td class="text-white"><strong><%= format_price(total_quantity_on_hand) %></strong></td>
-          <td class="text-white"><strong><%= format_price(total_sale_price_per_unit) %></strong></td>
+          <td><strong><%= format_price(total_quantity_on_hand) %></strong></td>
+          <td><strong><%= format_price(total_sale_price_per_unit) %></strong></td>
           <td></td>
           <td></td>
         </tr>
