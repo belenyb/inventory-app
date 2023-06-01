@@ -2,7 +2,7 @@
   <%= render partial: 'shared/section_title', locals: {title: "Categorías", backButton: false} %>
   <div class="row">
     <% @items_by_category.each do |category, items| %>
-      <div class="col-12 col-md-6 col-xl-3">
+      <div class="col-12 col-md-6">
         <%= render partial: 'shared/custom_collapsible', locals: {title: category.upcase, items: items} %>
       </div>
     <% end %>
