@@ -1,38 +1,47 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block">
-  <button class="toggleSidebar rounded-circle px-2 py-1 border-0">
-    <i class="bi bi-chevron-double-right"></i>
+<nav id="sidebarMenu" class="sidebarMenu col-auto d-md-block">
+  <button class="toggleSidebar rounded-circle px-2 py-1 border-0" id="toggleSidebar">
+    <i class="bi bi-chevron-double-left"></i>
   </button>
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to dashboard_index_path, class: "nav-link" do %>
-          <i class="bi bi-view-stacked pe-2"></i>
-          Dashboard
+        <%= link_to dashboard_index_path, class: "nav-link p-0" do %>
+          <i class="bi bi-view-stacked"></i>
+          <span>Dashboard</span>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to products_path, class: "nav-link" do %>
-          <i class="bi bi-cart2 pe-2"></i>
-          Productos
+        <%= link_to products_path, class: "nav-link p-0" do %>
+          <i class="bi bi-cart2"></i>
+          <span>Productos</span>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to categories_path, class: "nav-link" do %>
-          <i class="bi bi-book pe-2"></i>
-          Categorías
+        <%= link_to categories_path, class: "nav-link p-0" do %>
+          <i class="bi bi-book"></i>
+          <span>Categorías</span>
         <% end %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="bi bi-file-earmark-bar-graph pe-2"></i>
-          Reportes
+        <a class="nav-link p-0" href="#">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span>Reportes</span>
         </a>
       </li>
       <li class="nav-item">
-        <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
-          <i class="bi bi-box-arrow-right pe-2"></i> Cerrar sesión
+        <button type="button" class="nav-link p-0" data-bs-toggle="modal" data-bs-target="#logoutModal">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Cerrar sesión</span>
         </button>
       </li>
     </ul>
   </div>
 </nav>
+<script>
+  const sidebar = document.querySelector("#sidebarMenu");
+  const toggleSidebarBtn = document.querySelector("#toggleSidebar");
+
+  toggleSidebarBtn.onclick = () => {
+    sidebar.classList.toggle("sidebarMenu--collapse");
+  }
+</script>

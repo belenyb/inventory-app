@@ -36,7 +36,7 @@
         <% if user_signed_in? %>
           <%= render 'shared/side_menu' %>
         <% end %>
-        <main class="mx-auto px-md-4 <%= user_signed_in? ? "col-md-9 col-lg-10" : "col-12 col-md-4 mx-auto" %>">
+        <main class="mx-auto px-md-4 <%= user_signed_in? ? "col" : "col-12 col-md-4 mx-auto" %>">
         <%= yield %>
         </main>
       </div>

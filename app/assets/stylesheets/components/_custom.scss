@@ -87,18 +87,57 @@ a {
   color: $blue;
 }
 
-#sidebarMenu {
+.sidebarMenu {
   font-size: 16px;
   box-shadow: none;
   position: relative;
+  transition: all 1s;
   .toggleSidebar {
     position: absolute;
-    right: -15px;
-    z-index: 102;
+    right: -12px;
     background-color: $black;
     color: $white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  a, button {
+  .nav-item {
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    &:hover {
+      background-color: $white;
+      border-radius: 8px;
+    }
+    i {
+      padding-right: 0.5rem;
+    }
+  }
+  a, button, .nav-link:hover {
     color: $black;
+  }
+}
+
+.sidebarMenu--collapse {
+  .toggleSidebar i {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+  width: 4%;
+  .nav-item {
+    text-align: center;
+    button {
+      margin: auto;
+    }
+    .nav-link {
+      i {
+        padding-right: 0;
+      }
+    }
+  }
+  span {
+    display: none;
   }
 }
