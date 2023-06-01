@@ -141,3 +141,23 @@ a {
     display: none;
   }
 }
+
+.product-form, .perfil {
+  label {
+    background-color: #ececec;
+    color: $black;
+    padding: 0 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .form-control {
+    border-radius: unset;
+    border: 2px solid #ededed;
+    padding: 4px 8px;
+    font-size: 14px;
+    &:focus {
+      box-shadow: unset;
+      border-color: $black;
+    }
+  }
+}
