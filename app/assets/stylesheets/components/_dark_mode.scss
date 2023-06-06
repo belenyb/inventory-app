@@ -1,46 +1,64 @@
-.dark {
-  body {
+body.dark {
+  background-color: $black;
+
+  nav {
     background-color: $black;
-    nav {
-      background-color: $black;
-      .toggleSidebar {
-        background-color: $white;
-        color: $black;
-      }
-      a {
-        color: $white;
-      }
+
+    .toggleSidebar {
+      background-color: $white;
+      color: $black;
     }
-    main {
-      background-color: $bg-dark;
+
+    a {
       color: $white;
-      h6 {
+    }
+  }
+
+  main {
+    background-color: $bg-dark;
+    color: $white;
+
+    h6 {
+      color: $white;
+    }
+
+    .card,
+    .dashboard .dashboard-summary .card,
+    .table-responsive {
+      background-color: $black;
+      color: $white;
+    }
+
+    .table-responsive {
+
+      tr,
+      i {
         color: $white;
-      }
-      .card, .dashboard .dashboard-summary .card, .table-responsive {
-        background-color: $black;
-        color: $white;
-      }
-      .table-responsive {
-        tr, i {
-          color: $white;
-          &:hover {
-            background-color: $bg-dark;
-            td {
-              color: $white;
-            }
+
+        &:hover {
+          background-color: $bg-dark;
+
+          td {
+            color: $white;
           }
         }
       }
-      .ganancias-card, .pie-chart-container {
-        background-color: $white;
-        h6, span {
-          color: $black;
-        }
+    }
+
+    .ganancias-card,
+    .pie-chart-container {
+      background-color: $white;
+
+      h6,
+      span {
+        color: $black;
       }
-      .progress-bar, .ganancias-card, .pie-chart-container {
-        filter: invert(1);
-      }
+    }
+
+    .progress-bar,
+    .ganancias-card,
+    .pie-chart-container {
+      filter: invert(1);
     }
   }
 }

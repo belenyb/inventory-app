@@ -5,6 +5,15 @@
       InApp
     <% end %>
     <div class="d-flex flex-row align-items-center">
+      <% if (cookies[:theme] == 'dark') %>
+        <%= link_to set_theme_path(theme: 'light'), class: "darkModeToggler" do %>
+          <i class="bi bi-moon pe-4"></i>
+        <% end %>
+      <% else %>
+        <%= link_to set_theme_path(theme: 'dark'), class: "darkModeToggler" do %>
+          <i class="bi bi-moon-fill pe-4"></i>
+        <% end %>
+      <% end %>
       <button id="dark-mode-toggle">
         <i class="bi bi-moon pe-4"></i>
       </button>

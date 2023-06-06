@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   get '/profile', to: 'profile#index'
+  get '/set_theme', to: 'theme#update'
 end
