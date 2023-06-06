@@ -1,0 +1,22 @@
+.notifications-dropdown {
+  .bi-circle-fill {
+    color: rgb(226, 0, 0);
+    font-size: 6px;
+    top: 0;
+    left: 0;
+  }
+
+  .dropdown-menu {
+    width: 300px;
+    border: none;
+    box-shadow: 0 0 7px 8px #f0f0f036;
+    small {
+      color: $gray;
+      font-size: 10px;
+    }
+
+    .text-wrap {
+      font-size: 11px;
+    }
+  }
+}

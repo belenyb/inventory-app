@@ -6,23 +6,20 @@
     <% end %>
     <div class="d-flex flex-row align-items-center">
       <% if (cookies[:theme] == 'dark') %>
-        <%= link_to set_theme_path(theme: 'light'), class: "darkModeToggler" do %>
-          <i class="bi bi-moon pe-4"></i>
+        <%= link_to set_theme_path(theme: 'light'), class: "darkModeToggler me-4" do %>
+          <i class="bi bi-moon"></i>
         <% end %>
       <% else %>
-        <%= link_to set_theme_path(theme: 'dark'), class: "darkModeToggler" do %>
-          <i class="bi bi-moon-fill pe-4"></i>
+        <%= link_to set_theme_path(theme: 'dark'), class: "darkModeToggler me-4" do %>
+          <i class="bi bi-moon-fill"></i>
         <% end %>
       <% end %>
-      <button id="dark-mode-toggle">
-        <i class="bi bi-moon pe-4"></i>
-      </button>
-      <i class="bi bi-bell pe-4"></i>
+      <%= render partial: 'shared/notifications_dropdown' %>
       <div class="border-start" id="navbarNavDarkDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <button class="btn bg-transparent border-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="https://lh3.googleusercontent.com/a/AAcHTtco_XUlCV6TN1i83dbP96Ot1qLfnqXo0_phw45kq4k=s576-c-no" alt="Avatar image" width=35 class="rounded-circle border border-light-subtle border-2">
+              <img class="object-fit-cover rounded-circle" src="https://lh3.googleusercontent.com/a/AAcHTtco_XUlCV6TN1i83dbP96Ot1qLfnqXo0_phw45kq4k=s576-c-no" alt="Avatar image" width=35 class="rounded-circle border border-light-subtle border-2">
               Belen Y.
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
