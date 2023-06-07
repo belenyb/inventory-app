@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :products
   get '/profile', to: 'profile#index'
   get '/set_theme', to: 'theme#update'
+  get '/set_sidebar', to: 'theme#sidebar'
 end

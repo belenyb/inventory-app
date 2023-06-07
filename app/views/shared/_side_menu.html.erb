@@ -1,7 +1,13 @@
-<nav id="sidebarMenu" class="sidebarMenu col-auto d-md-block">
-  <button class="toggleSidebar rounded-circle px-2 py-1 border-0" id="toggleSidebar">
-    <i class="bi bi-chevron-double-left"></i>
-  </button>
+<nav id="sidebarMenu" class="sidebarMenu col-auto d-md-block <%= cookies[:sidebar] == 'closed' ? 'sidebarMenu--collapse' : '' %>">
+  <% if (cookies[:sidebar] == 'open') %>
+    <%= link_to set_sidebar_path(sidebar: 'closed'), class: "toggleSidebar rounded-circle px-2 py-1 border-0" do %>
+      <i class="bi bi-chevron-double-right"></i>
+    <% end %>
+  <% else %>
+    <%= link_to set_sidebar_path(sidebar: 'open'), class: "toggleSidebar rounded-circle px-2 py-1 border-0" do %>
+      <i class="bi bi-chevron-double-left"></i>
+    <% end %>
+  <% end %>
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
@@ -39,7 +45,7 @@
 </nav>
 <script>
   var sidebar = document.querySelector("#sidebarMenu");
-  var toggleSidebarBtn = document.querySelector("#toggleSidebar");
+  var toggleSidebarBtn = document.querySelector(".toggleSidebar");
 
   toggleSidebarBtn.onclick = () => {
     sidebar.classList.toggle("sidebarMenu--collapse");
