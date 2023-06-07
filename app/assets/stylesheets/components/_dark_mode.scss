@@ -17,7 +17,7 @@ body.dark {
     color: $white;
   }
 
-  .product-form {
+  .product-form, .perfil {
     label {
       background-color: $bg-dark-light;
       color: $white;
@@ -27,6 +27,9 @@ body.dark {
       border-color: $bg-dark;
       caret-color: $white;
       color: $white;
+      &::placeholder {
+        color: $white;
+      }
     }
   }
 
