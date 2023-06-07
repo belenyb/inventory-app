@@ -1,7 +1,36 @@
 body.dark {
   background-color: $black;
 
-  nav {
+  .btn:not(.btn-cancel):not(.btn-confirm):hover {
+    border: 1px solid $white;
+  }
+
+  #deleteConfirmationModal div {
+    color: $black;
+  }
+
+  a.link-offset-2 {
+    color: $white;
+  }
+
+  .goback-icon {
+    color: $white;
+  }
+
+  .product-form {
+    label {
+      background-color: $bg-dark-light;
+      color: $white;
+    }
+    .form-control {
+      background-color: $bg-dark-light;
+      border-color: $bg-dark;
+      caret-color: $white;
+      color: $white;
+    }
+  }
+
+  nav, .navbar {
     background-color: $black;
 
     .toggleSidebar {
@@ -9,8 +38,24 @@ body.dark {
       color: $black;
     }
 
-    a {
+    a, button, button:any-link {
       color: $white;
+    }
+
+    .notifications-dropdown {
+      .dropdown-menu-dark {
+        box-shadow: none;
+        border: 1px solid $bg-dark;
+        small {
+          color: $white;
+        }
+        li {
+          border-color: $bg-dark !important;
+          &:last-child {
+            border-color: transparent !important;
+          }
+        }
+      }
     }
   }
 

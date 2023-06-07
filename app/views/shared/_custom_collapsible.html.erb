@@ -1,4 +1,4 @@
-<div class="card mb-4 border-0 border-bottom rounded-0">
+<div class="card mb-4 border-0 border-bottom rounded-0 bg-transparent">
   <div class="card-body">
     <a data-bs-toggle="collapse" href="#<%= title %>" role="button" aria-expanded="false" aria-controls=<%= title %> class="collapse-button text-reset text-decoration-none">
       <div class="row align-items-center">
@@ -12,7 +12,7 @@
       </div>
     </a>
     <div class="collapse" id=<%= title %>>
-      <div class="card card-body border-0 px-0">
+      <div class="card card-body border-0 px-0 bg-transparent">
         <ul class="mb-0">
           <% items.first(5).each do |item| %>
             <li>
