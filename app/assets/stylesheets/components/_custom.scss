@@ -1,6 +1,15 @@
+.turbo-progress-bar {
+  display: none;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: $navigation-bg;
+
+  .spinner {
+    display: none;
+  }
+
   main {
     background: $white;
     padding: 2rem;
@@ -158,5 +167,42 @@ a {
       box-shadow: unset;
       border-color: $black;
     }
+  }
+}
+
+html[aria-busy="true"] body {
+  .spinner {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(103, 103, 103, 0.34);
+    z-index: 103;
+    backdrop-filter: blur(1.5px);
+    animation-name: stretch;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+}
+
+@keyframes stretch {
+  0% {
+      transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+      transform: scale(1.2);
   }
 }
