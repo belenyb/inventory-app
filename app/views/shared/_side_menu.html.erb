@@ -10,19 +10,19 @@
   <% end %>
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(dashboard_index_path) %>">
         <%= link_to dashboard_index_path, class: "nav-link p-0" do %>
           <i class="bi bi-view-stacked"></i>
           <span>Dashboard</span>
         <% end %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(products_path) %>">
         <%= link_to products_path, class: "nav-link p-0" do %>
           <i class="bi bi-cart2"></i>
           <span>Productos</span>
         <% end %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(categories_path) %>">
         <%= link_to categories_path, class: "nav-link p-0" do %>
           <i class="bi bi-book"></i>
           <span>Categorías</span>
